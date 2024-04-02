@@ -4,104 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    <link rel="stylesheet" href= "style.css">
+    <title>Errand Errand-Hub Service</title>
+</head>
+<body>
+    <header>
+        <h1>Errand Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tracking">Track Package</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#booking">signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        .container {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 400px;
-        }
+    <section id="home">
+        <h2>Welcome to Errand Hub</h2>
+        <p>Serving All Your Logistics Needs</p>
+    </section>
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    <section id="tracking">
+        <h2>Track Your Package</h2>
+        <label for="trackingNumber">Enter Tracking Number:</label>
+        <input type="text" id="trackingNumber">
+        <button onclick="trackPackage()">Track</button>
+        <p id="trackingResult"></p>
+    </section>
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    <section id="booking">
+        <h2>signup</h2>
+        <form id="shipmentForm">
+            <label for="senderName">Sender's Name:</label>
+            <input type="text" id="senderName" required>
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
+            <label for="receiverName">Receiver's Name:</label>
+            <input type="text" id="receiverName" required>
 
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+            <label for="shipmentDetails">Shipment Details:</label>
+            <textarea id="shipmentDetails" required></textarea>
 
-        .form-group button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+            <button type="submit">signup</button>
+        </form>
+    </section>
 
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Errand Hub was originally founded by fabian philip in 2024 as Modern Mail Service with the goal 
+            to meet mail delivery and messenger needs of the 
+            west Area businesses.
+            
+            Since then, we’ve 
+            continued to grow and diversify our service offerings 
+            to meet your needs. We credit our friendly, reliable 
+            service as a critical pillar for our continued success.
+
+            Now we are Nigerian fastest, most dependable, 24/7 delivery service. Our courier services include same-day delivery, overnight delivery. We look forward to working with you!
+        </p>
+    </section>
+
+    <section id="locations">
+        <h2>Our Locations</h2>
+        <p>
+            189 Glover Ikoyi, Lagos NG
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Phone: (09054365182)
+            <br>
+            Fax: (09166870023)
+        </p>
+    </section>
+
+    <section id="chat">
+        <h2>Chat with Us</h2>
+        <div id="chatMessages"></div>
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </section>
+
+    
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="frontend\public\favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Courier Management System" />
+  <link rel="apple-touch-icon" href="frontend\public\logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="frontend\public\manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Errand hub</title>
 </head>
 
 <body>
-    <div class="container">
-        <h2>Sign Up</h2>
-        <form id="signup-form">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Sign Up</button>
-            </div>
-        </form>
-    </div>
+  <script>
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import './index.css';
+    import App from './App';
+    import { Provider } from 'react-redux';
+    import { store, persistor } from './state/store';
+    import { PersistGate } from 'redux-persist/integration/react';
+    import { BrowserRouter } from 'react-router-dom';
 
-    <script>
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </PersistGate>
+      </Provider>
+    );
 
-            // Here you can handle form submission, for example, send data to server via AJAX
-            // You can access form data using event.target.elements
+  </script>
 
-            const formData = new FormData(event.target);
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-            // Example: Print form data to console
-            for (const [key, value] of formData.entries()) {
-                console.log(`${key}: ${value}`);
-            }
-        });
-    </script>
+    <footer>
+
+        <p>&copy; 2024 Errand-Hub Service</p>
+
+    </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
