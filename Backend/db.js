@@ -1,7 +1,7 @@
 // db.js
 const mongoose = require('mongoose');  // Importing mongoose library
 
-mongoose.connect('mongodb://localhost:27017/errand_hub', {   // Connecting to MongoDB
+mongoose.connect('mongodb://localhost:27017/errand-cluster', {   // Connecting to MongoDB
   useNewUrlParser: true,   // Option to use new URL parser
   useUnifiedTopology: true,  // Option to use new Server Discover and Monitoring engine
 })

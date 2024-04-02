@@ -11,7 +11,7 @@ const db = mongoose.connection
 
 // Connection Listeners
 db.on('error', (error) => console.error(error))
-db.once('open', () => console.log('Connected to CourierTnM DATABASE'))
+db.once('open', () => console.log('Connected to errand-cluster DATABASE'))
 
 app.use(cors())
 app.options('*', cors())
