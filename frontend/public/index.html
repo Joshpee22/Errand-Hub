@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Courier Management System"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Errand hub</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "style.css">
+    <title>Errand Errand-Hub Service</title>
+</head>
+<body>
+    <header>
+        <h1>Errand Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tracking">Track Package</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#booking">signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Errand Hub</h2>
+        <p>Serving All Your Logistics Needs</p>
+    </section>
+
+    <section id="tracking">
+        <h2>Track Your Package</h2>
+        <label for="trackingNumber">Enter Tracking Number:</label>
+        <input type="text" id="trackingNumber">
+        <button onclick="trackPackage()">Track</button>
+        <p id="trackingResult"></p>
+    </section>
+
+    <section id="booking">
+        <h2>signup</h2>
+        <form id="shipmentForm">
+            <label for="senderName">Sender's Name:</label>
+            <input type="text" id="senderName" required>
+
+            <label for="receiverName">Receiver's Name:</label>
+            <input type="text" id="receiverName" required>
+
+            <label for="shipmentDetails">Shipment Details:</label>
+            <textarea id="shipmentDetails" required></textarea>
+
+            <button type="submit">signup</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Errand Hub was originally founded by Stephen Joshua in 2024 as Modern Mail Service with the goal 
+            to meet mail delivery and messenger needs of the 
+            East Bay Area businesses. Since then, we’ve 
+            continued to grow and diversify our service offerings 
+            to meet your needs. We credit our friendly, reliable 
+            service as a critical pillar for our continued success.
+
+            Now we are Nigerian fastest, most dependable, 24/7 delivery service. Our courier services for the greater San Francisco Bay Area include same-day delivery, overnight delivery, route service, US mail, warehousing and distribution. We look forward to working with you!
+        </p>
+    </section>
+
+    <section id="locations">
+        <h2>Our Locations</h2>
+        <p>
+            189 Glover Ikoyi, Lagos NG
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Phone: (09054365182)
+            <br>
+            Fax: (09166870023)
+        </p>
+    </section>
+
+    <section id="chat">
+        <h2>Chat with Us</h2>
+        <div id="chatMessages"></div>
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </section>
+
     
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <footer>
+        <p>&copy; 2024 Errand-Hub Service</p>
+    </footer>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
