@@ -1,4 +1,4 @@
-import db from './index';
+import db from './index.js';
 
 const createParcelsTable = `CREATE TABLE IF NOT EXISTS
 parcels (

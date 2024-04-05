@@ -1,8 +1,8 @@
 import moment from 'moment';
 import uuidv4 from 'uuid/v4';
-import Helper from './HelperController';
+import Helper from './HelperController.js';
 import db from '../db';
-import User from '../model/user';
+import User from '../model/user.js';
 
 const userRoles = {
   ADMIN: 'ADMIN',

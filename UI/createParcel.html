@@ -1,63 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Sets the language of the webpage to English -->
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Errand-Hub | view Parcel </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="descrition" content="Web app to deliver parcels">
-    <meta name="kewords" content="Parcel, Delivery">
-    <meta name="author" content="Errand-Hub">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-P37/WZ9536M3qOmFzhZVs68rKbNlEwh8c2VsuS3ijzHlB+caHc61xjz1m2szwO8AtUMjyz3Lp1bUz1lEo7JhJg==" crossorigin="anonymous" />
-    <script type="text/javascript" src="./js/script.js"></script>
-    <script type="text/javascript" src="./js/createParcel.js"></script>
+    <meta charset="utf-8" /> <!-- Specifies the character encoding of the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures proper rendering and compatibility in Internet Explorer -->
+    <title>Errand-Hub | view Parcel </title> <!-- Sets the title of the webpage -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Sets the viewport for responsive design -->
+    <meta name="description" content="Web app to deliver parcels"> <!-- Provides a brief description of the webpage for search engines -->
+    <meta name="keywords" content="Parcel, Delivery"> <!-- Provides keywords for search engines -->
+    <meta name="author" content="Errand-Hub"> <!-- Specifies the author of the webpage -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" /> <!-- Links an external stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" /> <!-- Links an external stylesheet for sending parcels -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" /> <!-- Links an external stylesheet for displaying messages -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-P37/WZ9536M3qOmFzhZVs68rKbNlEwh8c2VsuS3ijzHlB+caHc61xjz1m2szwO8AtUMjyz3Lp1bUz1lEo7JhJg==" crossorigin="anonymous" /> <!-- Links an external font-awesome stylesheet for icons -->
+    <script type="text/javascript" src="./js/script.js"></script> <!-- Links an external JavaScript file for general functionality -->
+    <script type="text/javascript" src="./js/createParcel.js"></script> <!-- Links an external JavaScript file for creating parcels -->
 </head>
 <body>
-    <header>
+    <header> <!-- Header section of the webpage -->
         <div class="container">
             <div id="branding">
-              <h1><span class="highlight">SendIT</span></h1>
+              <h1><span class="highlight">SendIT</span></h1> <!-- Branding or logo -->
             </div>
             <form action="login.html">
-                <button type="submit" class="button_2">Log Out</button>
+                <button type="submit" class="button_2">Log Out</button> <!-- Log out button -->
            </form>
-           <div id="sayHello"></div>
-            <nav>
+           <div id="sayHello"></div> <!-- Placeholder for greeting -->
+            <nav> <!-- Navigation menu -->
                 <ul>
-                    <li><a href="index.html">Home |</a></li>
-                    <li class="current"><a href="index.html">Send a Parcel |</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home |</a></li> <!-- Link to home page -->
+                    <li class="current"><a href="index.html">Send a Parcel |</a></li> <!-- Link to Send a Parcel page (current) -->
+                    <li><a href="about.html">About</a></li> <!-- Link to About page -->
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
-        <div style="display: none;" id="output-error" class="error-msg">
-            <i class="fa fa-times-circle"></i>
+        <div style="display: none;" id="output-error" class="error-msg"> <!-- Error message placeholder -->
+            <i class="fa fa-times-circle"></i> <!-- Error icon -->
         </div>
-        <div style="display: none;" id="output-success" class="success-msg">
-            <i class="fa fa-check"></i>
+        <div style="display: none;" id="output-success" class="success-msg"> <!-- Success message placeholder -->
+            <i class="fa fa-check"></i> <!-- Success icon -->
         </div>
-        <div id="createParcel">
-        <label for="location"><b>Location</b></label>
-        <input id="location-parcel" type="text" placeholder="Enter Location" name="location" required>
+        <div id="createParcel"> <!-- Form for creating a parcel -->
+        <label for="location"><b>Location</b></label> <!-- Label for location input -->
+        <input id="location-parcel" type="text" placeholder="Enter Location" name="location" required> <!-- Location input field -->
     
-        <label for="destination"><b>Destination</b></label>
-        <input id="destination-parcel" type="text" placeholder="Enter Destination" name="destination" required>
+        <label for="destination"><b>Destination</b></label> <!-- Label for destination input -->
+        <input id="destination-parcel" type="text" placeholder="Enter Destination" name="destination" required> <!-- Destination input field -->
     
-        <label for="present_location"><b>Present location</b></label>
-        <input id="present-location-parcel" type="text" placeholder="Enter Present location of a parcel" name="present_location" required>
+        <label for="present_location"><b>Present location</b></label> <!-- Label for present location input -->
+        <input id="present-location-parcel" type="text" placeholder="Enter Present location of a parcel" name="present_location" required> <!-- Present location input field -->
 
-        <label for="weight"><b>Weight</b></label>
-        <input id="weight-parcel" type="text" placeholder="Enter weight of a parcel" name="weight" required>
+        <label for="weight"><b>Weight</b></label> <!-- Label for weight input -->
+        <input id="weight-parcel" type="text" placeholder="Enter weight of a parcel" name="weight" required> <!-- Weight input field -->
 
-        <label for="phone"><b>Receiver phone</b></label>
-        <input id="phone-parcel" type="text" placeholder="Enter receiver phone number" name="phone" required>
+        <label for="phone"><b>Receiver phone</b></label> <!-- Label for receiver phone input -->
+        <input id="phone-parcel" type="text" placeholder="Enter receiver phone number" name="phone" required> <!-- Receiver phone input field -->
     
-        <input id="createbtn-parcel" type="submit" class="createbtn" value="Create a Parcel"/>
+        <input id="createbtn-parcel" type="submit" class="createbtn" value="Create a Parcel"/> <!-- Submit button to create a parcel -->
         </div>
       </div>
     </div>

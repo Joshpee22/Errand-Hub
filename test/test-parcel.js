@@ -3,8 +3,8 @@ import moment from 'moment';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import uuidv4 from 'uuid/v4';
-import app from '../server';
-import Parcel from '../src/model/parcel';
+import app from '../server.js';
+import Parcel from '../src/model/parcel.js';
 
 
 chai.use(chaiHttp);

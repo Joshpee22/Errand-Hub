@@ -4,84 +4,118 @@
 <!-- This is the starting tag of HTML and it tells the browser that everything inside this tag is HTML code -->
 <html lang="en">
 
-	<!-- This part is like the brain of the webpage. It tells the browser what the webpage looks like, what language it's written in, and other important information -->
-	<head>
+<!-- This part is like the brain of the webpage. It tells the browser what the webpage looks like, what language it's written in, and other important information -->
+<head>
 
-		    <!-- This tells the browser how to interpret the characters in the webpage -->
-		        <meta charset="utf-8" />
+    <!-- This tells the browser how to interpret the characters in the webpage -->
+    <meta charset="utf-8" />
 
-			    <!-- This tells the browser to use the latest version of Internet Explorer to display the webpage -->
-			        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- This tells the browser to use the latest version of Internet Explorer to display the webpage -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-				    <!-- This is the title of the webpage, which appears on the browser's tab -->
-				        <title>Errand-Hub | Home </title>
+    <!-- This is the title of the webpage, which appears on the browser's tab -->
+    <title>Errand-Hub | Home </title>
 
-					    <!-- This tells the browser how the webpage should be displayed on different devices, like computers, tablets, and phones -->
-					        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This tells the browser how the webpage should be displayed on different devices, like computers, tablets, and phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-						    <!-- This is a brief description of what the webpage is about, which helps search engines understand the content of the page -->
-						        <meta name="description" content="Web app to deliver parcels">
+    <!-- This is a brief description of what the webpage is about, which helps search engines understand the content of the page -->
+    <meta name="description" content="Web app to deliver parcels">
 
-							    <!-- These are words related to the webpage's content, which also help search engines understand what the page is about -->
-							        <meta name="keywords" content="Parcel, Delivery">
+    <!-- These are words related to the webpage's content, which also help search engines understand what the page is about -->
+    <meta name="keywords" content="Parcel, Delivery">
 
-								    <!-- This is the name of the person or organization that created the webpage -->
-								        <meta name="author" content="Errand-Hub">
+    <!-- This is the name of the person or organization that created the webpage -->
+    <meta name="author" content="Errand-Hub">
 
-									    <!-- This links the webpage to an external stylesheet file called "style.css" which contains the design (colors, fonts, layout, etc.) of the webpage -->
-									        <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-	</head>
+    <!-- This links the webpage to an external stylesheet file called "style.css" which contains the design (colors, fonts, layout, etc.) of the webpage -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+</head>
 
-	<!-- This is the body of the webpage. It contains all the visible content like text, images, and buttons -->
-	<body>
+<!-- This is the body of the webpage. It contains all the visible content like text, images, and buttons -->
+<body>
 
-		    <!-- This is the header section of the webpage, usually containing the logo, navigation menu, and other important information -->
-		        <header>
+    <!-- This is the header section of the webpage, usually containing the logo, navigation menu, and other important information -->
+    <header>
 
-				        <!-- This is a container that holds everything in the header section -->
-					        <div class="container">
+        <!-- This is a container that holds everything in the header section -->
+        <div class="container">
 
-							            <!-- This is the branding or the name of the website -->
-								                <div id="branding">
-											                <!-- "Errand-Hub" is the name displayed on the webpage -->
-													                <h1><span class="highlight">Errand-Hub</span></h1>
-															            </div>
+            <!-- This is the branding or the name of the website -->
+            <div id="branding">
+                <!-- "Errand-Hub" is the name displayed on the webpage -->
+                <h1><span class="highlight">Errand-Hub</span></h1>
+            </div>
 
-																                <!-- This is a button that lets users log out -->
-																		            <form action="login.html">
-																				                    <button type="submit" class="button_2">Log out</button>
-																						               </form>
+            <!-- This is a button that lets users log out -->
+            <form action="login.html">
+                <button type="submit" class="button_2">Log out</button>
+           </form>
 
-																							                   <!-- This is a navigation menu that helps users move around the website -->
-																									               <nav>
-																											                       <ul>
-																														                           <!-- These are links to different pages of the website -->
-																																	                       <li><a href="index.html">Home |</a></li>
-																																			                           <li class="current"><a href="about.html">About</a></li>
-																																						                   </ul>
-																																								               </nav>
-																																									               </div>
-																																										           </header>
+            <!-- This is a navigation menu that helps users move around the website -->
+            <nav>
+                <ul>
+                    <!-- These are links to different pages of the website -->
+                    <li><a href="index.html">Home |</a></li>
+                    <li class="current"><a href="about.html">About </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-																																											       <!-- This is the main section of the webpage where most of the important content is -->
-																																											           <section id="about">
-																																													           <!-- This is a container that holds everything in the main section -->
-																																														           <div class="container">
+    <!-- This is the main section of the webpage where most of the important content is -->
+    <section id="about">
+        <!-- This is a container that holds everything in the main section -->
+        <div class="container">
 
-																																																               <!-- This is an article, or a section of text, that talks about the website -->
-																																																	                   <article id="main-article">
-																																																				                   <!-- This is the main heading of the article -->
-																																																						                   <h1>About Us</h1>
+            <!-- This is an article, or a section of text, that talks about the website -->
+            <article id="main-article">
+                <!-- This is the main heading of the article -->
+                <h1>About Us</h1>
 
-																																																								                   <!-- This is a paragraph of text that describes what the website does -->
-																																																										                   <p>
-																																																												                       Errand-Hub is like a special delivery service for packages. It helps people send and receive parcels quickly and easily.
-																																																														                           </p>
-																																																																	                   <p>
-																																																																			                       It's kind of like when you send a letter or a gift to someone, but Errand-Hub does it for bigger things, like packages or boxes. 
-																																																																					                           </p>
-																																																																								               </article>
+                <!-- This is a paragraph of text that describes what the website does -->
+                <p>
 
-																																																																									                   <!-- This is a sidebar, which usually contains additional information or links -->
-																																																																											               <aside id="sideBar">
-																																																																													                       <!-- This is a dark-colored box that contains more information about what Errand-
+                    Errand Hub, Lagos, Nigeria, offers efficient courier services tailored to meet local needs. Our services include fast and reliable parcel delivery within Lagos, tracking for real-time updates, secure handling of packages, and convenient pickup and drop-off locations. With a focus on speed, safety, and customer satisfaction, Errand Hub ensures seamless delivery experiences for individuals and businesses across Lagos, making us the trusted choice for courier services in the bustling city.
+                </p>
+                <p>
+                    
+Errand Hub, located at 158 Glover Road, Ikoyi, serves as a central hub for our courier operations in Lagos, Nigeria. Situated in the heart of Ikoyi, a prime location in Lagos, Errand Hub provides convenient access for customers to drop off and pick up packages. Our state-of-the-art facility is equipped with advanced tracking systems, ensuring efficient handling and delivery of parcels. With a dedicated team of professionals and a commitment to excellence, Errand Hub sets the standard for reliable and secure courier services in Lagos,catering to the diverse needs of individuals and businesses alike.                                            
+                </p>
+                    Errand-Hub is like a special delivery service for packages. It helps people send and receive parcels quickly and easily.
+                    </p>
+                <p>
+                    It's kind of like when you send a letter or a gift to someone, but Errand-Hub does it for bigger things, like packages or boxes. 
+                    </p>
+
+            </article>
+
+            <!-- This is a sidebar, which usually contains additional information or links -->
+            <aside id="sideBar">
+                <!-- This is a dark-colored box that contains more information about what Errand-Hub does -->
+                <div class="dark">
+                    <!-- This is the heading of the box -->
+                    <h1>What We Do</h1>
+
+                    <p>Errand Hub efficiently transports goods from one location to another, ensuring timely and secure delivery. By leveraging logistics expertise and advanced technology, delivery services provide convenience and reliability to individuals and businesses alike. </p>
+                    <p>
+
+
+                    <!-- These are paragraphs that explain more about what Errand-Hub does -->
+                    <p>Errand-Hub helps people send and receive packages quickly and safely. It's like having a special friend who takes care of delivering your stuff for you.</p>
+                    <p>
+                        So, if you need to send a present to your friend who lives far away, Errand-Hub can help you get it there without any worries.
+
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- This is the footer section of the webpage, usually containing copyright information -->
+    <footer>
+        <!-- This is the copyright notice -->
+        Errand-Hub &copy; 2024
+    </footer>
+</body>
+<!-- This is the closing tag of the HTML document -->

@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Errand-Hub | view Parcel </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="descrition" content="Web app to deliver parcels">
-    <meta name="kewords" content="Parcel, Delivery">
-    <meta name="author" content="Errand-Hub">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" />
-    <script type="text/javascript" src="./js/editUserAdmin.js"></script>
+    <!-- Meta tags -->
+    <meta charset="utf-8" /> <!-- Character encoding -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE compatibility -->
+    <title>Errand-Hub | view Parcel </title> <!-- Page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport -->
+    <meta name="descrition" content="Web app to deliver parcels"> <!-- Description meta tag -->
+    <meta name="kewords" content="Parcel, Delivery"> <!-- Keywords meta tag -->
+    <meta name="author" content="Errand-Hub"> <!-- Author meta tag -->
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" /> <!-- Main stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" /> <!-- Send stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" /> <!-- Message stylesheet -->
+    
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./js/editUserAdmin.js"></script> <!-- Edit user JavaScript -->
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <div class="container">
+            <!-- Branding -->
             <div id="branding">
               <h1><span class="highlight">SendIT</span></h1>
             </div>
+            <!-- Logout form -->
             <form action="login.html">
-                <button type="submit" class="button_2">Log Out</button>
+                <button type="submit" class="button_2">Log Out</button> <!-- Logout button -->
            </form>
+           <!-- Navigation -->
            <div id="sayHello"></div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home |</a></li>
-                    <li class="current"><a href="index.html">Send a Parcel |</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home |</a></li> <!-- Home link -->
+                    <li class="current"><a href="index.html">Send a Parcel |</a></li> <!-- Current page link -->
+                    <li><a href="about.html">About</a></li> <!-- About page link -->
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- Main content -->
     <div class="container">
-        <div  style="display: none;" id="output-error" class="error-msg">
-            <i class="fa fa-times-circle"></i>
+        <!-- Error and success messages -->
+        <div style="display: none;" id="output-error" class="error-msg">
+            <i class="fa fa-times-circle"></i> <!-- Error icon -->
         </div>
-        <div  style="display: none;" id="output-success" class="success-msg">
-            <i class="fa fa-check"></i>
+        <div style="display: none;" id="output-success" class="success-msg">
+            <i class="fa fa-check"></i> <!-- Success icon -->
         </div>
+        <!-- Edit user form -->
         <div id="editUser">
-            <label for="firstName"><b>First Name</b></label>
-            <input id="firstName-user" type="text"  name="firstName" placeholder="Enter firstName"/>
+            <label for="firstName"><b>First Name</b></label> <!-- First name label -->
+            <input id="firstName-user" type="text"  name="firstName" placeholder="Enter firstName"/> <!-- First name input field -->
         
-            <label for="lastName"><b>Last Name</b></label>
-            <input id="lastName-user" type="text" name="destination" placeholder="Enter destination"/>
+            <label for="lastName"><b>Last Name</b></label> <!-- Last name label -->
+            <input id="lastName-user" type="text" name="destination" placeholder="Enter destination"/> <!-- Last name input field -->
         
-            <label for="username"><b>Username</b></label>
-            <input id="username-user" type="text" name="username" placeholder="Enter username"/>
+            <label for="username"><b>Username</b></label> <!-- Username label -->
+            <input id="username-user" type="text" name="username" placeholder="Enter username"/> <!-- Username input field -->
 
-            <label for="email"><b>Email</b></label>
-            <input id="email-user" type="text" name="email" placeholder="Enter email" />
+            <label for="email"><b>Email</b></label> <!-- Email label -->
+            <input id="email-user" type="text" name="email" placeholder="Enter email" /> <!-- Email input field -->
 
-            <label for="userRole"><b>User Role</b></label>
-            <input id="userRole-user" type="text" name="userRole" placeholder="Enter userRole"/>
+            <label for="userRole"><b>User Role</b></label> <!-- User role label -->
+            <input id="userRole-user" type="text" name="userRole" placeholder="Enter userRole"/> <!-- User role input field -->
         
-            <input id="edituser" type="submit" class="editbtn" value="Save changes"/>
+            <input id="edituser" type="submit" class="editbtn" value="Save changes"/> <!-- Save changes button -->
         </div>
-      </div>
     </div>
 </body>
 </html>

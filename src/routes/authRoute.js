@@ -1,7 +1,7 @@
-import express from 'express'; // Importing the 'express' framework
+const express = require ('express'); // Importing the 'express' framework
 
-import UserControllers from '../controller/UserController'; // Importing the user controller
-import Helper from '../controller/HelperController'; // Importing the helper controller
+import UserControllers from '../controller/UserController.js'; // Importing the user controller
+import Helper from '../controller/HelperController.js'; // Importing the helper controller
 
 const authRoute = express.Router(); // Creating an instance of Express Router
 

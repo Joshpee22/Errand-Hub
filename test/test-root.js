@@ -1,6 +1,6 @@
 import chai from 'chai'; // Importing the 'chai' assertion library
 import chaiHttp from 'chai-http'; // Importing 'chai-http' for making HTTP requests for testing
-import app from '../server'; // Importing the Express application
+import app from '../.js'; // Importing the Express application
 
 chai.use(chaiHttp);
 

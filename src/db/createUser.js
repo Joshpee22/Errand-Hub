@@ -1,4 +1,4 @@
-import db from './index'; // Importing the 'db' module for database operations
+import db from './index.js'; // Importing the 'db' module for database operations
 
 const queryText = `CREATE TABLE IF NOT EXISTS
       users(

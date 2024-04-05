@@ -1,7 +1,7 @@
 import chai from 'chai'; // Importing the 'chai' assertion library
 import chaiHttp from 'chai-http'; // Importing 'chai-http' for making HTTP requests for testing
 import { after } from 'mocha'; // Importing 'after' from Mocha for running cleanup after tests
-import app from '../server'; // Importing the Express application
+import app from '../server.js'; // Importing the Express application
 
 chai.use(chaiHttp);
 let token = '';

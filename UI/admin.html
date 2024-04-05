@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		    <!-- This part sets up the page's character encoding, compatibility, title, viewport, and metadata -->
-		        <meta charset="utf-8" />
-			    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-			        <title>Errand-Hub | Admin</title>
-				    <meta name="viewport" content="width=device-width, initial-scale=1">
-				        <meta name="description" content="Web app to deliver parcels">
-					    <meta name="keywords" content="Parcel, Delivery">
-					        <meta name="author" content="Errand-Hub">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Errand-Hub | Admin </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="descrition" content="Web app to deliver parcels">
+    <meta name="kewords" content="Parcel, Delivery">
+    <meta name="author" content="Errand-Hub">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/tabs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-P37/WZ9536M3qOmFzhZVs68rKbNlEwh8c2VsuS3ijzHlB+caHc61xjz1m2szwO8AtUMjyz3Lp1bUz1lEo7JhJg==" crossorigin="anonymous" />
+    <script type="text/javascript" src="./js/adminView.js"></script>
+   
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+              <h1><span class="highlight">Errand-Hub</span></h1>
+            </div>
+            <form action="login.html">
+                <button type="submit" class="button_2">Log Out</button>
+           </form>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home |</a></li>
+                    <li class="current"><a href="#">view a Parcel |</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="viewParcel">
+        <div class="container">
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tabone" checked="checked">
+                <label for="tabone">Parcels</label>
+                <div class="tab">
+                    <form action="createParcel.html" >
+                        <button type="submit" class="btn_send">Create a Parcel</button>
+                        <input id="search" type="text" placeholder="Search">
+                      </form>
+                      <table id="parcels">
+                        <tr>
+                            <th>From</th>
+                            <th>Destination</th>
+                            <th>Present Location</th>
+                            <th>Weight(kg)</th>
+                            <th>Price (Rwf)</th>
+                            <th>Receiver Phone</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+                
+                <input type="radio" name="tabs" id="tabtwo">
+                <label for="tabtwo">Users</label>
+                <div class="tab">
+                  <input id="search" type="text" placeholder="Search">
+                    <table id="users">
+                        <tr>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>User Role</th>
+                        <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+              </div>
+        </div>
+    </section>
 
-						    <!-- This part links external stylesheet files for styling -->
-						        <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-							    <link rel="stylesheet" type="text/css" media="screen" href="./css/tabs.css" />
-							        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-P37/WZ9536M3qOmFzhZVs68rKbNlEwh8c2VsuS3ijzHlB+caHc61xjz1m2szwO8AtUMjyz3Lp1bUz1lEo7JhJg==" crossorigin="anonymous" />
-
-								    <!-- This part links external JavaScript file for functionality -->
-								        <script type="text/javascript" src="./js/adminView.js"></script>
-	</head>
-	<body>
-		    <!-- This is the header section -->
-		        <header>
-				        <div class="container">
-						            <!-- This is the branding section -->
-							                <div id="branding">
-										                <h1><span class="highlight">Errand-Hub</span></h1>
-												            </div>
-													                <!-- This is the log out button -->
-															            <form action="login.html">
-																	                    <button type="submit" class="button_2">Log Out</button>
-																			                </form>
-																					            <!-- This is the navigation menu -->
-																						                <nav>
-																									                <ul>
-																												                    <!-- These are links for navigating to different pages -->
-																														                        <li><a href="index.html">Home |</a></li>
-																																	                    <li class="current"><a href="#">View a Parcel |</a></li>
-																																			                        <li><a href="about.html">About</a></li>
-																																						                </ul>
-																																								            </nav>
-																																									            </div>
-																																										        </header>
-
-																																											    <!-- This is the main section for viewing parcels and users -->
-																																											        <section id="viewParcel">
-																																													        <div class="container">
-																																															            <!-- This is the tab interface -->
-																																																                <div class="tabs">
-																																																			                <!-- This is the first tab for viewing parcels -->
-																																																					                <input type="radio" name="tabs" id="tabone" checked="checked">
-																																																							                <label for="tabone">Parcels</label>
-																																																									                <div class="tab">
-																																																												                    <!-- This is the form for creating a new parcel -->
-																																																														                        <form action="createParcel.html" >
-																																																																		                        <button type="submit" class="btn_send">Create a Parcel</button>
-																																																																					                        <!-- This is the search input field for parcels -->
-																																																																								                        <input id="search" type="text" placeholder="Search">
-																																																																											                    </form>
-																																																																													                        <!-- This is the table for displaying parcel details -->
-																																																																																                    <table id="parcels">
-																																																																																			                            <tr>
-																																																																																							                                <!-- These are column headers for parcel details -->
-																																																																																											                            <th>From</th>
-																																																																																														                                <th>Destination</th>
-																																																																																																		                            <th>Present Location</th>
-																																																																																																					                                <th>Weight(kg)</th>
-																																																																																																									                            <th>Price (Rwf)</th>
-																																																																																																												                                <th>Receiver Phone</th>
-																																																																																																																                            <th>Status</th>
-																																																																																																																			                                <th>Action</th>
-																																																																																																																							                        </tr>
-																																																																																																																										                    </table>
-																																																																																																																												                    </div>
-																																																																																																																														                    
-																																																																																																																														                    <!-- This is the second tab for viewing users -->
-																																																																																																																																                    <input type="radio" name="tabs" id="tabtwo">
-																																																																																																																																		                    <label for="tabtwo">Users</label>
-																																																																																																																																				                    <div class="tab">
-																																																																																																																																							                        <!-- This is the search input field for users -->
-																																																																																																																																										                    <input id="search" type="text" placeholder="Search">
-																																																																																																																																												                        <!-- This is the table for displaying user details -->
-																																																																																																																																															                    <table id="users">
-																																																																																																																																																		                            <tr>
-																																																																																																																																																						                                <!-- These are column headers for user details -->
-																																																																																																																																																										               
+    <footer>Errand-Hub &copy; 2024</footer>
+</body>
+</html>

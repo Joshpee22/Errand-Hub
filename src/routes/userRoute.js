@@ -1,8 +1,9 @@
-import express from 'express'; // Importing the 'express' framework
-import ParcelController from '../controller/ParcelController'; // Importing the parcel controller
-import UserControllers from '../controller/UserController'; // Importing the user controller
-import Helper from '../controller/HelperController'; // Importing the helper controller
-import Auth from '../middleware/Authentication'; // Importing the authentication middleware
+const express = require ('express'); // Importing the 'express' framework
+
+import ParcelController from '../controller/ParcelController.js'; // Importing the parcel controller
+import UserControllers from '../controller/UserController.js'; // Importing the user controller
+import Helper from '../controller/HelperController.js'; // Importing the helper controller
+import Auth from '../middleware/Authentication.js'; // Importing the authentication middleware
 
 const userRoute = express.Router(); // Creating an instance of Express Router
 

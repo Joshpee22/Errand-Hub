@@ -1,59 +1,64 @@
 <!DOCTYPE html> <!-- Defines the document type and version of HTML -->
 <html lang="en"> <!-- Sets the language of the webpage to English -->
-	<head>
-		    <meta charset="utf-8" /> <!-- Specifies the character encoding of the document -->
-		        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures proper rendering and compatibility in Internet Explorer -->
-			    <title>SendIT | view Parcel </title> <!-- Sets the title of the webpage -->
-			        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Sets the viewport for responsive design -->
-				    <meta name="description" content="Web app to deliver parcels"> <!-- Provides a brief description of the webpage for search engines -->
-				        <meta name="keywords" content="Parcel, Delivery"> <!-- Provides keywords for search engines -->
-					    <meta name="author" content="Errand-Hub"> <!-- Specifies the author of the webpage -->
-					        <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" /> <!-- Links an external stylesheet for styling -->
-						    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" /> <!-- Links an external stylesheet for sending parcels -->
-						        <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" /> <!-- Links an external stylesheet for displaying messages -->
-							    <script type="text/javascript" src="./js/clientView.js"></script> <!-- Links an external JavaScript file for client view -->
-							        <script type="text/javascript" src="./js/editParcel.js"></script> <!-- Links an external JavaScript file for editing parcels -->
-	</head>
-	<body>
-		    <header> <!-- Header section of the webpage -->
-			            <div class="container">
-					                <div id="branding">
-								              <h1><span class="highlight">Errand-Hub</span></h1> <!-- Branding or logo -->
-									                  </div>
-											              <form action="login.html">
-													                      <button type="submit" class="button_2">Log Out</button> <!-- Log out button -->
-															                 </form>
-																	            <div id="sayHello"></div> <!-- Placeholder for greeting -->
-																		                <nav> <!-- Navigation menu -->
-																					                <ul>
-																								                    <li><a href="index.html">Home |</a></li> <!-- Link to home page -->
-																										                        <li class="current"><a href="index.html">Send a Parcel |</a></li> <!-- Link to Send a Parcel page (current) -->
-																													                    <li><a href="about.html">About</a></li> <!-- Link to About page -->
-																															                    </ul>
-																																	                </nav>
-																																			        </div>
-																																				    </header>
-																																				        <div class="container">
-																																						        <div  style="display: none;" id="output-error" class="error-msg"> <!-- Error message placeholder -->
-																																								            <i class="fa fa-times-circle"></i> <!-- Error icon -->
-																																									            </div>
-																																										            <div  style="display: none;" id="output-success" class="success-msg"> <!-- Success message placeholder -->
-																																												                <i class="fa fa-check"></i> <!-- Success icon -->
-																																														        </div>
-																																															        <div id="createParcel"> <!-- Form for creating a parcel -->
-																																																	            <label for="location"><b>Location</b></label> <!-- Label for location input -->
-																																																		                <input id="location-parcel" type="text" placeholder="Enter Location" name="location" required> <!-- Location input field -->
-																																																				        
-																																																				            <label for="destination"><b>Destination</b></label> <!-- Label for destination input -->
-																																																					                <input id="destination-parcel" type="text" placeholder="Enter Destination" name="destination" required> <!-- Destination input field -->
-																																																							        
-																																																							            <label for="present_location"><b>Present location</b></label> <!-- Label for present location input -->
-																																																								                <input id="present-location-parcel" type="text" placeholder="Enter Present location of a parcel" name="present_location" required> <!-- Present location input field -->
+<head>
+    <meta charset="utf-8" /> <!-- Specifies the character encoding of the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures proper rendering and compatibility in Internet Explorer -->
+    <title>SendIT | view Parcel </title> <!-- Sets the title of the webpage -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Sets the viewport for responsive design -->
+    <meta name="description" content="Web app to deliver parcels"> <!-- Provides a brief description of the webpage for search engines -->
+    <meta name="keywords" content="Parcel, Delivery"> <!-- Provides keywords for search engines -->
+    <meta name="author" content="Errand-Hub"> <!-- Specifies the author of the webpage -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" /> <!-- Links an external stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/send.css" /> <!-- Links an external stylesheet for sending parcels -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" /> <!-- Links an external stylesheet for displaying messages -->
+    <script type="text/javascript" src="./js/clientView.js"></script> <!-- Links an external JavaScript file for client view -->
+    <script type="text/javascript" src="./js/editParcel.js"></script> <!-- Links an external JavaScript file for editing parcels -->
+</head>
+<body>
+    <header> <!-- Header section of the webpage -->
+        <div class="container">
+            <div id="branding">
+              <h1><span class="highlight">Errand-Hub</span></h1> <!-- Branding or logo -->
+            </div>
+            <form action="login.html">
+                <button type="submit" class="button_2">Log Out</button> <!-- Log out button -->
+           </form>
+           <div id="sayHello"></div> <!-- Placeholder for greeting -->
+            <nav> <!-- Navigation menu -->
+                <ul>
+                    <li><a href="index.html">Home |</a></li> <!-- Link to home page -->
+                    <li class="current"><a href="index.html">Send a Parcel |</a></li> <!-- Link to Send a Parcel page (current) -->
+                    <li><a href="about.html">About</a></li> <!-- Link to About page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div  style="display: none;" id="output-error" class="error-msg"> <!-- Error message placeholder -->
+            <i class="fa fa-times-circle"></i> <!-- Error icon -->
+        </div>
+        <div  style="display: none;" id="output-success" class="success-msg"> <!-- Success message placeholder -->
+            <i class="fa fa-check"></i> <!-- Success icon -->
+        </div>
+        <div id="createParcel"> <!-- Form for creating a parcel -->
+            <label for="location"><b>Location</b></label> <!-- Label for location input -->
+            <input id="location-parcel" type="text" placeholder="Enter Location" name="location" required> <!-- Location input field -->
+        
+            <label for="destination"><b>Destination</b></label> <!-- Label for destination input -->
+            <input id="destination-parcel" type="text" placeholder="Enter Destination" name="destination" required> <!-- Destination input field -->
+        
+            <label for="present_location"><b>Present location</b></label> <!-- Label for present location input -->
+            <input id="present-location-parcel" type="text" placeholder="Enter Present location of a parcel" name="present_location" required> <!-- Present location input field -->
 
-																																																										            <label for="weight"><b>Weight</b></label> <!-- Label for weight input -->
-																																																											                <input id="weight-parcel" type="text" placeholder="Enter weight of a parcel" name="weight" required> <!-- Weight input field -->
+            <label for="weight"><b>Weight</b></label> <!-- Label for weight input -->
+            <input id="weight-parcel" type="text" placeholder="Enter weight of a parcel" name="weight" required> <!-- Weight input field -->
 
-																																																													            <label for="phone"><b>Receiver phone</b></label> <!-- Label for receiver phone input -->
-																																																														                <input id="phone-parcel" type="text" placeholder="Enter receiver phone number" name="phone" required> <!-- Receiver phone input field -->
-																																																																        
-																																																																    
+            <label for="phone"><b>Receiver phone</b></label> <!-- Label for receiver phone input -->
+            <input id="phone-parcel" type="text" placeholder="Enter receiver phone number" name="phone" required> <!-- Receiver phone input field -->
+        
+            <input id="createbtn-parcel" type="submit" class="createbtn" value="Save changes Parcel"/> <!-- Submit button to save changes for a parcel -->
+        </div>
+      </div>
+    </div>
+</body>
+</html>
