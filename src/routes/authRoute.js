@@ -1,7 +1,6 @@
-const express = require ('express'); // Importing the 'express' framework
-
-import UserControllers from '../controller/UserController.js'; // Importing the user controller
-import Helper from '../controller/HelperController.js'; // Importing the helper controller
+const express = require('express'); // Importing the 'express' framework
+const UserControllers = require('../controller/UserController.js'); // Importing the user controller
+const Helper = require('../controller/HelperController.js'); // Importing the helper controller
 
 const authRoute = express.Router(); // Creating an instance of Express Router
 
@@ -11,4 +10,4 @@ authRoute.route('/signup')
 authRoute.route('/login')
   .post(Helper.userValidator, UserControllers.login); // Defining a POST route for user login, validating user input using userValidator middleware from HelperController and invoking login function from UserController
 
-export default authRoute; // Exporting the authentication routes
+module.exports = authRoute; // Exporting the authentication routes

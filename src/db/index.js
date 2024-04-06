@@ -1,13 +1,12 @@
-import { Pool } from 'pg';
-import dotenv from 'dotenv';
-// import dbconfig from './config';
+// index.js
 
-dotenv.config(); // Loading environment variables from a .env file into process.env
+const { Pool } = require('pg');
+require('dotenv').config();   // Loading environment variables from a .env file into process.env
 
 const pool = new Pool({
   user: process.env.PGUSER,
   host: process.env.PGHOST,
-  database: process.env.PGNDATABASE,
+  database: process.env.PGDATABASE,
   port: process.env.PGPORT,
   password: process.env.PGPASSWORD,
 });
@@ -24,6 +23,6 @@ function query(text, params) {
       });
   });
 }
-export default {
+module.exports = {
   query,
 };

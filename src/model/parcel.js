@@ -15,4 +15,4 @@ class Parcel {
   }
 }
 
-export default Parcel; // Exporting the Parcel class
+module.exports = Parcel; // Exporting the Parcel class

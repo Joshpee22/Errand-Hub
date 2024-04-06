@@ -1,13 +1,14 @@
-import moment from 'moment';
-import uuidv4 from 'uuid/v4';
-import Helper from './HelperController.js';
-import db from '../db';
-import User from '../model/user.js';
+const moment = require('moment');
+const { v4: uuidv4 } = require('uuid');
+const Helper = require('./HelperController.js');
+const db = require('../db');
+const User = require('../model/user.js');
 
 const userRoles = {
   ADMIN: 'ADMIN',
   NORMAL: 'NORMAL',
 };
+
 const Users = {
   async signup(req, res) {
     const {
@@ -32,7 +33,7 @@ const Users = {
       return res.status(400).send(error);
     }
   },
-  // Login a user
+
   async login(req, res) {
     const text = 'SELECT * FROM users WHERE email = $1';
     try {
@@ -50,6 +51,7 @@ const Users = {
       return res.status(400).send({ message: error, status: 400 });
     }
   },
+
   async userById(req, res) {
     const text = 'SELECT * FROM users WHERE id = $1';
     try {
@@ -62,6 +64,7 @@ const Users = {
       return res.status(400).send(error);
     }
   },
+
   async allUsers(req, res) {
     const text = 'SELECT * FROM users';
     try {
@@ -74,6 +77,7 @@ const Users = {
       return res.status(400).send(error);
     }
   },
+
   async delete(req, res) {
     const deleteQuery = 'DELETE FROM users WHERE id=$1 returning *';
 
@@ -87,6 +91,7 @@ const Users = {
       return res.status(400).send({ message: error, status: 400 });
     }
   },
+
   async updateUser(req, res) {
     const selectOneQuery = 'SELECT * FROM users WHERE id=$1';
     const updateOneQuery = 'UPDATE users SET user_role=$1, modified_date=$2 WHERE id=$3';
@@ -111,4 +116,4 @@ const Users = {
   },
 };
 
-export default Users;
+module.exports = Users;

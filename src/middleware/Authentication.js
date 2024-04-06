@@ -1,42 +1,38 @@
-// Disabling eslint rule for consistent return statements
-
-import jwt from 'jsonwebtoken'; // Importing the 'jsonwebtoken' library for working with JWT tokens
-import db from '../db'; // Importing the 'db' module for database operations
+const jwt = require('jsonwebtoken');
+const db = require('../db');
 
 const Auth = {
-  // Middleware function to verify JWT token
   async verifyToken(req, res, next) {
-    const token = req.headers['x-access-token']; // Extracting the token from request headers
+    const token = req.headers['x-access-token'];
     if (!token) {
-      return res.status(400).send({ message: 'Token is not provided' }); // Sending error if token is not provided
+      return res.status(400).send({ message: 'Token is not provided' });
     }
     try {
-      const decoded = await jwt.verify(token, process.env.SECRET); // Verifying the token using the provided secret key
-      const text = 'SELECT * FROM users WHERE id = $1'; // SQL query to retrieve user data based on decoded token
-      const { rows } = await db.query(text, [decoded.userId]); // Executing the query with user ID from decoded token
+      const decoded = await jwt.verify(token, process.env.SECRET);
+      const text = 'SELECT * FROM users WHERE id = $1';
+      const { rows } = await db.query(text, [decoded.userId]);
 
       if (!rows[0]) {
-        return res.status(400).send({ message: 'The token you provided is invalid' }); // Sending error if no user found for the decoded token
+        return res.status(400).send({ message: 'The token you provided is invalid' });
       }
-      req.user = { id: decoded.userId }; // Setting user ID in request object for further middleware or route handling
-      next(); // Proceeding to next middleware or route handling
+      req.user = { id: decoded.userId };
+      next();
     } catch (error) {
-      return res.status(400).send(error); // Sending error if token verification fails
+      return res.status(400).send(error);
     }
   },
-  // Middleware function to secure routes accessible only to admins
   async secureRoute(req, res, next) {
     try {
-      const text = 'SELECT * FROM users WHERE id = $1'; // SQL query to retrieve user data based on user ID in request
-      const { rows } = await db.query(text, [req.user.id]); // Executing the query with user ID from request object
+      const text = 'SELECT * FROM users WHERE id = $1';
+      const { rows } = await db.query(text, [req.user.id]);
       if (rows[0].user_role !== 'ADMIN') {
-        return res.status(403).send({ message: 'Forbidden', status: 403 }); // Sending forbidden error if user is not an admin
+        return res.status(403).send({ message: 'Forbidden', status: 403 });
       }
-      next(); // Proceeding to next middleware or route handling if user is an admin
+      next();
     } catch (error) {
-      return res.status(400).send({ message: error }); // Sending error if database query fails
+      return res.status(400).send({ message: error });
     }
   },
 };
 
-export default Auth;
+module.exports = Auth;

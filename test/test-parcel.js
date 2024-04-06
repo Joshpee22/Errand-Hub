@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
-import moment from 'moment';
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import uuidv4 from 'uuid/v4';
-import app from '../server.js';
-import Parcel from '../src/model/parcel.js';
+const moment = require('moment');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const { v4: uuidv4 } = require('uuid');
+const app = require('../server.js');
+const Parcel = require('../src/model/parcel.js');
 
 
 chai.use(chaiHttp);

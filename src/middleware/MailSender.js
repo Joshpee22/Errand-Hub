@@ -1,5 +1,5 @@
 // file modified from https://nodemailer.com/about/
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
 async function newUserEmail(email, firstName, lastName, status, presentationLocation) {
   try {
@@ -37,8 +37,6 @@ async function newUserEmail(email, firstName, lastName, status, presentationLoca
   }
 }
 
-newUserEmail();
-
-export default {
+module.exports = {
   newUserEmail,
 };

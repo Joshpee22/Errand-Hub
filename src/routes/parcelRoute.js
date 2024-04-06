@@ -1,35 +1,16 @@
-const express = require ('express');
+const express = require('express');
+const parcelRoute = express.Router(); // Create a new router instance
 
-import Auth from '../middleware/Authentication.js';
-import ParcelController from '../controller/ParcelController.js';
-import Helper from '../controller/HelperController.js';
+// Import necessary controllers and middleware
+const ParcelController = require('../controller/ParcelController.js');
+const Helper = require('../controller/HelperController.js');
+const Auth = require('../middleware/Authentication.js');
 
-const parcelRoute = express.Router();
-
-module.exports = router;
-
-parcelRoute.route('/')
-  .get(Auth.secureRoute, ParcelController.getAll)
-  .post(Helper.parcelValidor, ParcelController.create);
-
-parcelRoute.route('/:parcelId')
-  .get(ParcelController.getOne);
-
-parcelRoute.route('/:parcelId/admin')
-  .get(Auth.secureRoute, ParcelController.getOneAdmin);
-
-parcelRoute.route('/:parcelId/cancel')
-  .put(ParcelController.cancel);
-
-parcelRoute.route('/:parcelId/destination')
-  .put(ParcelController.changeDestination);
-
+// Define routes
 parcelRoute.route('/:parcelId/presentLocation')
-  .put(Helper.validatePresentLocation, Auth.secureRoute,
-    ParcelController.ChangePresentLocation);
+  .put(Helper.validatePresentLocation, Auth.secureRoute, ParcelController.changePresentLocation.bind(ParcelController));
 
 parcelRoute.route('/:parcelId/status')
-  .put(Helper.validateStatus, Auth.secureRoute,
-    ParcelController.changeStatus);
+  .put(Helper.validateStatus, Auth.secureRoute, ParcelController.changeStatus.bind(ParcelController));
 
-export default parcelRoute;
+module.exports = parcelRoute;

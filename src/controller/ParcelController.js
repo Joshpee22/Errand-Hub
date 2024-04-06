@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-// Import necessary libraries and modules
-import moment from 'moment'; // Library for handling dates and time
-import uuidv4 from 'uuid/v4'; // Function to generate unique identifiers
-import db from '../db'; // Database connection module
-import Parcel from '../model/parcel'; // Model for parcel data structure
-import mailSender from '../middleware/MailSender'; // Middleware for sending emails
+const moment = require('moment');
+const { v4: uuidv4 } = require('uuid');
+const db = require('../db');
+const Parcel = require('../model/parcel.js');
+const mailSender = require('../middleware/MailSender.js');
 
-// Define parcel status constants
-=======
-import moment from 'moment';
-import uuidv4 from 'uuid/v4';
-import db from '../db';
-import Parcel from '../model/parcel.js';
-import mailSender from '../middleware/MailSender.js';
-
->>>>>>> e568c8643f8373c57f10f6a8820fd291310c9731
 const parcelStatus = {
   PENDING: 'PENDING',
   IN_TRANSIT: 'IN_TRANSIT',
@@ -23,10 +12,6 @@ const parcelStatus = {
   CANCELLED: 'CANCELLED',
 };
 
-<<<<<<< HEAD
-// Define SQL queries for parcel operations
-=======
->>>>>>> e568c8643f8373c57f10f6a8820fd291310c9731
 const createParcelQuery = `INSERT INTO
       parcels(id, location, destination ,present_location, weight, owner_id, receiver_phone, status, created_date, modified_date)
       VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
@@ -53,20 +38,12 @@ WHERE id=$3 AND owner_id = $4 returning *`;
 
 const getUserQuery = 'SELECT * FROM users WHERE id = $1';
 
-<<<<<<< HEAD
-// Define an object called "Parcels" with functions for parcel management
-=======
->>>>>>> e568c8643f8373c57f10f6a8820fd291310c9731
 const Parcels = {
   async create(req, res) {
     const {
       location, destination, presentLocation, weight, receiverPhone,
     } = req.body;
 
-<<<<<<< HEAD
-    // Create a new parcel object with extracted information
-=======
->>>>>>> e568c8643f8373c57f10f6a8820fd291310c9731
     const newParcel = new Parcel(uuidv4(), location, destination, presentLocation, weight,
       req.user.id, receiverPhone, parcelStatus.PENDING, moment(new Date()), moment(new Date()));
 
@@ -79,7 +56,7 @@ const Parcels = {
       return res.status(400).send({ message: error, status: 400 });
     }
   },
-  // Fetch all parcel delivery orders
+
   async getAll(req, res) {
     const findAllQuery = 'SELECT * FROM parcels';
     try {
@@ -93,7 +70,7 @@ const Parcels = {
       });
     }
   },
-  // Fetch all parcel delivery orders by a specific user
+
   async parcelByUser(req, res) {
     const parcelByUserQuery = 'SELECT * FROM parcels WHERE owner_id = $1';
 
@@ -108,7 +85,7 @@ const Parcels = {
       });
     }
   },
-  // Fetch a specific parcel delivery order
+
   async getOne(req, res) {
     try {
       const { rows, rowCount } = await db.query(findOneQuery, [req.params.parcelId, req.user.id]);
@@ -129,7 +106,7 @@ const Parcels = {
       });
     }
   },
-  // Fetch a specific parcel delivery order
+
   async getOneAdmin(req, res) {
     try {
       const { rows, rowCount } = await db.query(findOneQueryAdmin, [req.params.parcelId]);
@@ -150,7 +127,7 @@ const Parcels = {
       });
     }
   },
-  // Cancel the specific parcel delivery order
+
   async cancel(req, res) {
     try {
       const { rows } = await db.query(findOneQueryUser, [req.params.parcelId, req.user.id]);
@@ -183,8 +160,8 @@ const Parcels = {
       return res.status(400).send(err);
     }
   },
-  // Change the present location of a specific parcel delivery order
-  async ChangePresentLocation(req, res) {
+
+  async changePresentLocation(req, res) {
     try {
       const { rows } = await db.query(findOneQueryAdmin, [req.params.parcelId]);
       if (!rows[0]) {
@@ -208,6 +185,7 @@ const Parcels = {
       return res.status(400).send(err);
     }
   },
+
   async changeDestination(req, res) {
     try {
       const { rows } = await db.query(findOneQuery, [req.params.parcelId, req.user.id]);
@@ -233,6 +211,7 @@ const Parcels = {
       return res.status(400).send(err);
     }
   },
+
   async changeStatus(req, res) {
     try {
       const { rows } = await db.query(findOneQueryAdmin, [req.params.parcelId]);
@@ -245,7 +224,6 @@ const Parcels = {
         rows[0].id,
       ];
       const response = await db.query(updateStatuQuery, updateValues);
-      // fetch user
       const userResponse = await db.query(getUserQuery, [response.rows[0].owner_id]);
 
       if (response.rows[0].status === parcelStatus.ARRIVED
@@ -253,7 +231,6 @@ const Parcels = {
         || response.rows[0].status === parcelStatus.CANCELLED) {
         return res.status(202).send({ message: 'Change status failed, Parcel has been arrived, delivered or cancelled ', status: 202 });
       }
-      // send email
       mailSender.newUserEmail(
         userResponse.rows[0].email,
         userResponse.rows[0].first_name,
@@ -270,4 +247,4 @@ const Parcels = {
   },
 };
 
-export default Parcels;
+module.exports = Parcels;

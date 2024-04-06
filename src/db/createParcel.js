@@ -1,4 +1,6 @@
-import db from './index.js';
+// createParcel.js
+
+const db = require('./index.js');
 
 const createParcelsTable = `CREATE TABLE IF NOT EXISTS
 parcels (
@@ -17,8 +19,7 @@ parcels (
 
 setTimeout(() => {
   db.query(createParcelsTable) // Executes a database query to create the parcels table
-    .then(() => {
-    })
+    .then(() => {})
     .catch(() => {
       // console.log(err);
     });

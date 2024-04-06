@@ -1,4 +1,6 @@
-import db from './index.js'; // Importing the 'db' module for database operations
+// createUser.js
+
+const db = require('./index.js'); // Importing the 'db' module for database operations
 
 const queryText = `CREATE TABLE IF NOT EXISTS
       users(
@@ -15,8 +17,7 @@ const queryText = `CREATE TABLE IF NOT EXISTS
 
 (() => {
   db.query(queryText) // Executes a database query to create the users table if it doesn't exist
-    .then(() => {
-    })
+    .then(() => {})
     .catch((err) => {
       console.log(err); // Logging any errors that occur during database query execution
     });

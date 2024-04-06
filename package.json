@@ -1,7 +1,7 @@
 {
   "name": "errand-hub",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "<img src=\"https://github.com/Kingvadee/Errand-Hub/blob/main/UI/images/WhatsApp%20Image%202024-03-05%20at%2014.24.55_378b50fb.jpg\" alt=\"Errand Hub Logo\" style=\"width: 250px;\">",
   "main": "server.js",
   "directories": {
@@ -46,12 +46,13 @@
     "sendmail": "^1.6.1",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "chai": "^5.1.0",
     "chai-http": "^4.3.0",
     "mocha": "^9.1.3",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.0"
   }
 }

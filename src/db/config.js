@@ -1,9 +1,8 @@
-// Importing the 'dotenv' library/module
-import dotenv from 'dotenv';
+// config.js
 
-dotenv.config(); // Loading environment variables from a .env file into process.env
+require('dotenv').config(); // Loading environment variables from a .env file into process.env
 
-export default {
+module.exports = {
   development: process.env.DATABASE_URL,
   test: process.env.DATABASE_URL_TEST,
 };

@@ -14,4 +14,4 @@ class User {
   }
 }
 
-export default User; // Exporting the User class
+module.exports = User; // Exporting the User class
