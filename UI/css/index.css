@@ -78,7 +78,7 @@ nav .navbar {
 a:hover {
     transition: 0.5s;
     color: #333;
-    background-color: #2e3192;
+    background-color: #e4eded;
 }
 
 #background-img {
@@ -100,7 +100,7 @@ a:hover {
 #background-img p {
     font-size: 23px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #f87a05;
+    color: rgb(135, 90, 146);
     font-weight: bold;
     text-align: center;
 
