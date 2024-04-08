@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar,
 .container-fluid {
     background-color: var(--container-fluid-bg);
@@ -20,7 +26,7 @@
 
 .navbar {
     background-color: rgb(135, 90, 146);
-    height: 132px;
+    height: 115px;
 }
 
 .dropdown-item,
@@ -37,18 +43,20 @@ a {
 
 .navbar-nav .nav-link {
     font-size: 17px;
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 .container-fluid {
     padding-top: 0px;
     padding-bottom: 0px;
+    padding-left: 50px;
 }
 
 nav .navbar {
     height: 60%;
 }
 
+/* this is the company logo */
 .navbar img {
     padding-bottom: 25px;
     margin-left: 28px;
@@ -94,7 +102,7 @@ a:hover {
     color: #fff;
     font-size: 44px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #2e3192;
+    background-color: #3395d6;
 }
 
 #background-img p {
@@ -106,143 +114,270 @@ a:hover {
 
 }
 
+.services-list {}
 
-.container-slider {
-    max-width: 1200px;
-    width: 95%;
+.services-list h3 {
+    text-align: center;
+
 }
 
-.slider-wrapper {
+#services {
+    background-image: url('')
+}
+
+
+.container-b {
+    background-color: lightgrey;
+    padding-bottom: 20px;
+    background-image: url('/UI/images/about.jpg');
+
+}
+
+#section-about h1 {
+    background-color: #3395d6;
+
+}
+
+#showcase-p {
+    background-image: url('/UI/images/delivery-man.jpg');
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.signup {
+    margin-top: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.signup a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.make-del-btn {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Style for login form */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container-k {
     position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+    margin-left: 33%;
+    border: 1px solid blue;
+    border-radius: 23px;
 }
 
-.slider-wrapper .slide-button {
+header {
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-field,
+form .button {
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 19px;
+    transition: .4s;
+}
+
+input:focus {
+    border: 1px solid #1DA1F2;
+}
+
+.input-field label,
+span.show {
     position: absolute;
     top: 50%;
-    outline: none;
-    border: none;
-    height: 50px;
-    width: 50px;
-    z-index: 5;
-    color: #fff;
-    display: flex;
-    cursor: pointer;
-    font-size: 2.2rem;
-    background: #000;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
     transform: translateY(-50%);
 }
 
-.slider-wrapper .slide-button:hover {
-    background: #404040;
+.input-field label {
+    left: 15px;
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: .4s;
 }
 
-.slider-wrapper .slide-button#prev-slide {
-    left: -25px;
-    display: none;
+span.show {
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.slider-wrapper .slide-button#next-slide {
-    right: -25px;
+input:valid~span.show {
+    visibility: visible;
 }
 
-.slider-wrapper .image-list {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 18px;
-    font-size: 0;
-    list-style: none;
-    margin-bottom: 30px;
-    overflow-x: auto;
-    scrollbar-width: none;
+input:focus~label,
+input:valid~label {
+    transform: translateY(-33px);
+    background: white;
+    font-size: 16px;
+    color: #1DA1F2;
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar {
-    display: none;
+form .button {
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
 }
 
-.slider-wrapper .image-list .image-item {
-    width: 325px;
-    height: 400px;
-    object-fit: cover;
-}
-
-.container .slider-scrollbar {
-    height: 24px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.slider-scrollbar .scrollbar-track {
-    background: #ccc;
-    width: 100%;
-    height: 2px;
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    position: relative;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-    height: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
+.button .inner {
     position: absolute;
-    background: #000;
-    top: 0;
-    bottom: 0;
-    width: 50%;
     height: 100%;
-    cursor: grab;
-    border-radius: inherit;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    transition: all .4s;
+    background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
 }
 
-.slider-scrollbar .scrollbar-thumb:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
+.button:hover .inner {
     left: 0;
-    right: 0;
-    top: -10px;
-    bottom: -10px;
 }
 
-
-@media only screen and (max-width: 1023px) {
-    .slider-wrapper .slide-button {
-        display: none !important;
-    }
-
-    .slider-wrapper .image-list {
-        gap: 10px;
-        margin-bottom: 15px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .slider-wrapper .image-list .image-item {
-        width: 280px;
-        height: 380px;
-    }
-
-    .slider-scrollbar .scrollbar-thumb {
-        width: 20%;
-    }
+.button button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
-footer {
-    background-color: rgb(139, 208, 231);
+.container .auth {
+    margin: 35px 0 20px 0;
+    font-size: 19px;
+    color: grey;
 }
 
-footer a {
+.links {
+    display: flex;
+    cursor: pointer;
+}
+
+.facebook,
+.google {
+    height: 40px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin: 0 10px;
+    transition: .4s;
+}
+
+.facebook:hover {
+    border: 1px solid #4267B2;
+}
+
+.google:hover {
+    border: 1px solid #dd4b39;
+}
+
+.facebook i,
+.facebook span {
+    color: #4267B2;
+    padding-left: 78%;
+}
+
+.google i,
+.google span {
+    color: #dd4b39;
+    padding-left: 90%;
+}
+
+.links i {
+    font-size: 23px;
+    line-height: 40px;
+    margin-left: -90px;
+}
+
+.links span {
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.signup {
+    margin-top: 50px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.signup a {
+    color: #3498db;
     text-decoration: none;
-    background-color: rgb(139, 208, 231);
+}
+
+#showcase-s {
+    background-image: url('/UI/images/delivery-man.jpg');
+    margin-bottom: 3%;
+}
+
+#services {
+    background-color: rgb(211, 211, 211);
+}
+
+.footer {
+    background-color: #787bc4;
+    color: white;
+    height: 140px;
+    margin-bottom: 0px;
+}
+
+.footer a {
+    text-decoration: none;
+    background-color: #787bc4;
+    color: white;
 }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Errand-Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="descrition" content="Web app to deliver parcels">
+    <meta name="kewords" content="Parcel, Delivery">
+    <meta name="author" content="Errand-Hub">
+    <link rel="stylesheet" type="text/css" media="screen" href="/UI/css/index.css?ver=0.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+
+    <link rel="stylesheet" href="/UI/js/script.js">
+
+    <script type="text/javascript" src="./js/quickOrder.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <img src="/UI/images/logo.png" alt="my-logo"
+            style="height: auto; width: 220px; padding-left: 16px;padding-top: 3%;">
+        <div class="container-fluid" style="padding-left: 14%;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/UI/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="signup-page">
+        <div class="container-k">
+            <header style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Create an account</header>
+            <form action="{{ url_for('auth.register') }}" method="post">
+                <div class="row">
+                    <div class="input-field col-6">
+                        <input name="first_name" id="first_name" type="text" required>
+                        <label>First Name</label>
+                    </div>
+                    <div class="input-field col-6">
+                        <input name="last_name" id="last_name" type="text" required>
+                        <label>Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-6">
+                        <input name="age" id="age" type="number" required>
+                        <label>Age</label>
+                    </div>
+                    <div class="input-field col-6">
+                        <input name="email" type="email" required>
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-6">
+                        <input name="phone_number" type="tel" required>
+                        <label>Phone Number</label>
+                    </div>
+                    <div class="input-field col-6">
+                        <input name="date" type="date">
+                        <label>Date Of Birth</label>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <input name="address" type="text" class="addres" required>
+                    <label for="address">Address</label>
+                </div>
+                <div class="input-field">
+                    <input name="blood_group" type="text" class="addres" required>
+                    <label for="blood_group">Blood Group</label>
+                </div>
+                <div>
+                    <div class="sex-selector" style="font-weight: 500;">
+                        <label for="gender">Select gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+
+                    </div>
+                    <div class="input-field">
+                        <input name="password" class="pswrd" type="password" required>
+                        <span class="show">SHOW</span>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="password" class="pswrd" type="password" required>
+                        <span class="show">SHOW</span>
+                        <label>Confirm password</label>
+                    </div>
+                    <div class="button">
+                        <div class="inner"></div>
+                        <button type="submit">SIGN UP</button>
+                    </div>
+            </form>
+            <div class="auth">
+                Or login with
+            </div>
+            <div class="links">
+                <div class="facebook">
+                    <i class="fab fa-facebook-square"><span>Facebook</span></i>
+                </div>
+                <div class="google">
+                    <i class="fab fa-google-plus-square"><span>Google</span></i>
+                </div>
+            </div>
+            <div class="signup">
+                Already a member? <a href="{{ url_for('auth.login') }}">login now</a>
+            </div>
+        </div>
+    </section>

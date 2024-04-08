@@ -1,6 +1,4 @@
 # Errand Hub🚚📦🌍
-<img src="https://private-user-images.githubusercontent.com/125440789/310174676-1f8556da-810a-43b4-88c5-a1f006233c22.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDk2NTI5MDIsIm5iZiI6MTcwOTY1MjYwMiwicGF0aCI6Ii8xMjU0NDA3ODkvMzEwMTc0Njc2LTFmODU1NmRhLTgxMGEtNDNiNC04OGM1LWExZjAwNjIzM2MyMi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzA1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMwNVQxNTMwMDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iODJiYmQxZGYxZGJiMmJlYzFiOGEwMzBhZDVmNTkxZmNhYzRjZmNkMTE4MmFiZDVjNzA3Mjg4NmFmODExOWFiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.dhCkKkzSEzc_MJLjEsadR81zkmrH-JHhT74YSV9ZXj4" alt="Errand Hub Logo" style="width: 250px;">
-
 
 ### Authors👩‍💻👨‍💻👩‍💻👨‍💻:
 - [Rita Ejezie](https://github.com/Rita2024) - Backend Developer 
@@ -17,7 +15,6 @@ The primary purpose of this project is to create a user-friendly platform that f
 
 ##### Features
 - `User authentication for secure access to the system`.
-- `Package tracking to monitor the status and location of packages in real-time`.
 - `Dashboard for users to initiate package pick-up requests and view delivery status`.
 - `Admin panel for managing courier logistics, including assigning drivers and updating delivery routes`.
 - `Project Structure`
@@ -25,32 +22,21 @@ The primary purpose of this project is to create a user-friendly platform that f
 
 
 #### Frontend Technologies
-Stephen Joshua and Fabian Imoh are responsible for the frontend development. And will be utilizing:
+Stephen Joshua and Fabian Imoh are responsible for the frontend development using languages like:
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" height="60" alt="JavaScript Logo">](https://www.javascript.com/)JavaScript.
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="60" height="60" alt="CSS Logo">](https://www.w3.org/Style/CSS/Overview.en.html)CSS.
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="60" height="60" alt="HTML Logo">](https://developer.mozilla.org/en-US/docs/Web/HTML)HTML
 
-- React JS [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="60" height="60" alt="React.js Logo">](https://reactjs.org/)
-#### Frontend Structure
-- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="60" height="60" alt="React.js Logo">](https://reactjs.org/) React.js: `The frontend is built using React.js to create a dynamic and responsive user interface`.
-  
+
+
 #### Backend Technologies
 The backend development is led by Rita Ejezie and Ojeifo David. And will be working with the following technologies:
-- Node JS [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="60" height="60" alt="Node.js Logo">](https://nodejs.org/)
-- Express JS [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="60" height="60" alt="Express.js Logo">](https://expressjs.com/)
-- MongoDB [<img src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png" width="60" height="60" alt="MongoDB Logo">](https://www.mongodb.com/)
-- Mongoose [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongoose/mongoose-original.svg" width="60" height="60" alt="Mongoose Logo">](https://mongoosejs.com/)
-- Redis [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" width="60" height="60" alt="Redis Logo">](https://redis.io/)
-- Python [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="60" height="60" alt="Python Logo">](https://www.python.org/) `for specific backend functionalities`
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="60" height="60" alt="Node.js Logo">](https://nodejs.org/)Node JS.
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="60" height="60" alt="Express.js Logo">](https://expressjs.com/)Express JS.
+- [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="60" height="60" alt="PostgreSQL Logo">](https://www.postgresql.org/)PostgreSQL.
 
-## Installation :accessibility: 💻🖱️
-##### 🧰 To set up and run the Courier Management System Web Application locally, follow these steps:
-### Backend
-- Clone the repository: `git clone https://github.com/Kingvadee/Errand-Hub`
-- Navigate to the backend directory: `cd backend`
-- Install dependencies: `npm install`
-- Run the server: `npm start`
-### Frontend
-- Navigate to the frontend directory: `cd frontend`
-- Install dependencies: `npm install`
-- Start the application: `npm start`
+
+
 
 ## Conclusion 🖋️
 We are excited about this project and believe that it will serve as a robust portfolio piece for our team. The collaboration between backend and frontend developers ensures a well-rounded and functional Courier Management System. Feel free to explore the codebase and contribute to the project's development!

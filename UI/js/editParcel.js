@@ -1,3 +1,3 @@
-      uptateBtn.addEventListener('click', updateParcel);
+uptateBtn.addEventListener('click', updateParcel);
     }
   };
